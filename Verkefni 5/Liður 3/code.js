@@ -61,7 +61,7 @@ function NextQuestion() {
         ClearHTMLTag(container);
 
         let score = document.createElement('h1');
-        score.innerText = 'You got ' + correctAnswers + '/' + questions.length + ' correct!';
+        score.innerText = `You got ${correctAnswers}/${questions.length} correct!`;
         container.appendChild(score);
         container.classList.add('CenterText');
     }
