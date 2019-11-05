@@ -1,0 +1,15 @@
+.center {
+    margin: auto;
+    width: 370px;
+    padding-top: 10em;
+    text-align: center;
+}
+
+table {
+    border: solid black 2px;
+    width: 370px;
+    margin-top: 1em;
+}
+th {
+    border: solid black 2px;
+}
