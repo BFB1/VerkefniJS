@@ -1,0 +1,15 @@
+.center {
+    margin: auto;
+    width: 370px;
+    padding-top: 10em;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
