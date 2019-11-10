@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Without Articles</title>
+</head>
+<body>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #bands {
+        list-style: inside square;
+        font-size: 20px;
+        background: white;
+        width: 500px;
+        margin: auto;
+        padding: 0;
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    #bands li {
+        border-bottom: 1px solid #efefef;
+        padding: 20px;
+    }
+
+    #bands li:last-child {
+        border-bottom: 0;
+    }
+
+    a {
+        color: #ffc600;
+        text-decoration: none;
+    }
+
+</style>
+
+<ul id="bands"></ul>
+
+<script>
+    const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+    // Til þess að raða þessum lista þarf að fjarlægja stafina á undan nafninu og whitespace.
+    // Þetta fall tekur streng og gerir hann tilbúinn til flokkunar í stafrófsröð
+    function strip(bandName) {
+        return bandName.replace(/^(a |the |an )/i, '').trim();
+    }
+
+    // Hér notar hann sort til þess að raða listanum og notar strip til þess að gera gögnin tilbúin.
+    const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+
+    // Þessi kóði er bara til að koma raðaða listanum í dom'ið
+    document.querySelector('#bands').innerHTML =
+        sortedBands
+            .map(band => `<li>${band}</li>`)
+            .join('');
+
+    // Og listin er líka loggaður í console.
+    console.log(sortedBands);
+
+</script>
+
+</body>
+</html>
