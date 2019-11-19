@@ -1,0 +1,23 @@
+body {
+    max-width: 60em;
+    margin: auto;
+    word-wrap: break-spaces;
+    background-color: black;
+    color: white;
+}
+header {
+    text-align: center;
+}
+
+h4 {
+    max-width: 10em;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.concert {
+    margin: 1em;
+}
