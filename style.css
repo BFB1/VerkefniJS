@@ -12,4 +12,6 @@ body {
 
 a {
     color: white;
+    display: block;
+    margin: 1.5em;
 }
