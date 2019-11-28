@@ -12,7 +12,7 @@ let dateToField = document.getElementById('dateTo');
 
 moment.locale('is');
 
-fetch('http://apis.is/concerts').then(response => response.json().then(Start));
+fetch('https://apis.is/concerts').then(response => response.json().then(Start));
 
 events = [];
 
